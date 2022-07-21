@@ -1,0 +1,33 @@
+
+
+int findExtra(int a[], int b[], int n) {
+        // add code here.
+        
+        int low = 0;
+        int high = n-1;
+        
+        while(low<high){
+            
+           int mid = low + (high - low)/2;
+           
+           if(a[mid] == b[mid]){
+               low = mid+1;
+           }
+           else{
+               high  = mid;
+           }
+    }
+     return high;
+    }
+
+
+OUTPUT  
+
+ Input: 
+7
+2 4 6 8 9 10 12
+2 4 6 8 10 12
+Your Output: 
+4
+Expected Output: 
+4            //INDEX OF EXTRA ELEMENT
